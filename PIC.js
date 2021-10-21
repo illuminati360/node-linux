@@ -313,3 +313,5 @@ PIC_Controller.prototype.get_hard_intno = function() {
 };
 
 
+exports.PIC = PIC;
+exports.PIC_Controller = PIC_Controller;

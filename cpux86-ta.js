@@ -9717,3 +9717,5 @@ CPU_X86.prototype.load_binary = function(binary_array, mem8_loc) {
   }
   return len;
 };
+
+exports.CPU_X86 = CPU_X86;

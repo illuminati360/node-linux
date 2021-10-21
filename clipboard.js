@@ -70,3 +70,5 @@ clipboard_device.prototype.ioport_readl = function(mem8_loc) {
                 return 0;
     }
 };
+
+exports.clipboard_device = clipboard_device;

@@ -144,3 +144,5 @@ Serial.prototype.send_chars = function(na) {
     this.receive_fifo += na;
     this.send_char_from_fifo();
 };
+
+exports.Serial = Serial;

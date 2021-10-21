@@ -1,8 +1,7 @@
-export * from "cpux86-ta";
-export * from "Serial";
-export * from "PIT";
-export * from "PIC";
-export * from "CMOS";
-export * from "KBD";
-export * from "clipboard";
-export * from "PCEmulator";
+const { PCEmulator } = require("./PCEmulator.js");
+const { Term } = require("./term.js");
+
+module.exports = {
+    PCEmulator,
+    Term
+}

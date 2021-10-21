@@ -223,3 +223,4 @@ PIT.prototype.update_irq = function() {
     this.set_irq(0);
 };
 
+exports.PIT = PIT;

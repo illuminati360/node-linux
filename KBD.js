@@ -24,4 +24,4 @@ KBD.prototype.write_command = function(mem8_loc, x) {
     }
 };
 
-
+exports.KBD = KBD;

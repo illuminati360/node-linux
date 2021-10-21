@@ -8,6 +8,14 @@ Main PC Emulator Routine
 */
 
 // used as callback wrappers for emulated PIT and PIC chips
+const CPU_X86 = require('./cpux86-ta.js').CPU_X86;
+const PIC_Controller = require('./PIC.js').PIC_Controller;
+const PIT = require('./PIT.js').PIT;
+const CMOS = require('./CMOS.js').CMOS;
+const Serial = require('./Serial.js').Serial;
+const KBD = require('./KBD.js').KBD;
+const clipboard_device = require('./clipboard.js').clipboard_device;
+
 function set_hard_irq_wrapper(irq) { this.hard_irq = irq;}
 function return_cycle_count() { return this.cycle_count; }
 
@@ -191,17 +199,4 @@ PCEmulator.prototype.register_ioport_write = function(start, len, iotype, io_cal
 PCEmulator.prototype.ioport80_write = function(mem8_loc, data) {}; //POST codes! Seem to be ignored?
 PCEmulator.prototype.reset = function() { this.request_request = 1; };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+exports.PCEmulator = PCEmulator;

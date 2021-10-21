@@ -64,3 +64,5 @@ CMOS.prototype.ioport_read = function(mem8_loc) {
         return data;
     }
 };
+
+exports.CMOS = CMOS;
